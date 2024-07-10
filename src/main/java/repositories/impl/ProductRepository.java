@@ -71,9 +71,9 @@ public class ProductRepository implements IRepository {
     public List<Product> findTop(int top) {
         List<Product> products = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = getConnection().prepareStatement("select product.*, sum(ton_kho) as sum from san_pham inner join order_detail on san_pham.id_san_pham=order_detail.id_san_pham group by san_pham.id_san_pham order by sum desc limit ?");
-            ResultSet resultSet = preparedStatement.executeQuery();
+            PreparedStatement preparedStatement = getConnection().prepareStatement("select san_pham.*, sum(ton_kho) as sum from san_pham inner join order_detail on san_pham.id_san_pham=order_detail.san_pham_id group by san_pham.id_san_pham order by sum desc limit ?;");
             preparedStatement.setInt(1, top);
+            ResultSet resultSet = preparedStatement.executeQuery();
             int id;
             String name;
             Float price;

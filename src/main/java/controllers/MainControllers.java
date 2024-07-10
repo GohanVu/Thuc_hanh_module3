@@ -53,12 +53,6 @@ public class MainControllers extends HttpServlet {
             case "top":
                 topStudent(req, resp);
                 break;
-//            case "edit":
-//                updateStudent(req, resp);
-//                break;
-//            case "search":
-//                searchByModel(req, resp);
-//                break;
         }
     }
 

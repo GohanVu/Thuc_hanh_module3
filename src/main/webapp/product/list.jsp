@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" >Danh sach san pham </a>
+        <a class="navbar-brand" href="product" >Danh sach san pham </a>
     </div>
 </nav>
 <div class="container">
@@ -22,9 +22,9 @@
         <div >
             Danh sach top
             <select id = "top" name="top">
-                <option value=3>3</option>
-                <option value=3>5</option>
-                <option value=3>10</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
             </select>
             San pham duoc dat hang nhieu nhat
             <button type="submit" class="btn btn-warning">Xem</button>
@@ -48,7 +48,6 @@
                 <td>${product.price}</td>
                 <td>${product.discount}</td>
                 <td>${product.quantity}</td>
-
             </tr>
         </c:forEach>
         </tbody>
